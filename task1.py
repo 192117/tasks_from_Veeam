@@ -42,10 +42,6 @@ def main():
                         result = [str(proc_from_all.cpu_percent()), str(proc_from_all.memory_info()[0]),
                                   str(proc_from_all.memory_info()[-1]), str(proc_from_all.num_handles())]
                         write(filename, result)
-                        # write(filename, 'cpu: {}\n'.format(proc_from_all.cpu_percent()))
-                        # write(filename, 'WorkingSet: {}\n'.format(proc_from_all.memory_info()[0]))
-                        # write(filename, 'PrivateBytes: {}\n'.format(proc_from_all.memory_info()[-1]))
-                        # write(filename, 'handle: {}\n'.format(proc_from_all.num_handles()))
                         time.sleep(int(times))
         except Exception as err:
             print("Something's wrong")
