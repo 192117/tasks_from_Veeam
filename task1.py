@@ -1,4 +1,5 @@
 # Программа написана под Windows.
+# Запуск python процессов.
 import time
 import psutil
 import os
@@ -34,7 +35,7 @@ def main():
         try:
             filename = file.split("\\")[-1].split(".")[0]
             write_start(filename)
-            new_process = subprocess.Popen(['python', file])
+            new_process = subprocess.Popen(['python', file]) # Запуск python процесса.
             new_process_pid = new_process.pid
             for proc_from_all in psutil.process_iter():
                 if proc_from_all.pid == new_process_pid:
